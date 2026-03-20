@@ -10,21 +10,21 @@ func WaitScreen () {
             pico.zet.alpha(255)
 
             pico.zet.color.draw :white
-            pico.output.draw.text("DROIDLAND MAGE",       @{ '!', x=150, y=120, h=20 })
-            pico.output.draw.text("Press Space to Start", @{ '!', x=150, y=156, h=13 })
+            pico.output.draw.text("DROIDLAND MAGE",       @{ '%', x=0.5,  y=0.3,   h=0.05   })
+            pico.output.draw.text("Press Space to Start", @{ '%', x=0.5,  y=0.39,  h=0.0325 })
 
             pico.zet.color.draw(DOT_COLORS.top)
-            pico.output.draw.text("Yellow dot = W", @{ '!', x=150, y=200, h=11 })
+            pico.output.draw.text("Yellow dot = W", @{ '%', x=0.5, y=0.5,   h=0.0275 })
             pico.zet.color.draw(DOT_COLORS.bottom)
-            pico.output.draw.text("Green dot  = S", @{ '!', x=150, y=218, h=11 })
+            pico.output.draw.text("Green dot  = S", @{ '%', x=0.5, y=0.545, h=0.0275 })
             pico.zet.color.draw(DOT_COLORS.left)
-            pico.output.draw.text("Blue dot   = A", @{ '!', x=150, y=236, h=11 })
+            pico.output.draw.text("Blue dot   = A", @{ '%', x=0.5, y=0.59,  h=0.0275 })
             pico.zet.color.draw(DOT_COLORS.right)
-            pico.output.draw.text("Pink dot   = D", @{ '!', x=150, y=254, h=11 })
+            pico.output.draw.text("Pink dot   = D", @{ '%', x=0.5, y=0.635, h=0.0275 })
 
             pico.zet.color.draw :white
-            pico.output.draw.text("Space = destroy whole row", @{ '!', x=150, y=272, h=11 })
-            pico.output.draw.text("Wrong key = lose a life!",  @{ '!', x=150, y=290, h=11 })
+            pico.output.draw.text("Space = destroy whole row", @{ '%', x=0.5, y=0.68,  h=0.0275 })
+            pico.output.draw.text("Wrong key = lose a life!",  @{ '%', x=0.5, y=0.725, h=0.0275 })
         }
     }
 }
