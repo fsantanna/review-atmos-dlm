@@ -10,13 +10,13 @@ func DeathScreen (elapsed) {
             pico.zet.alpha(255)
 
             pico.zet.color.draw @{r=220, g=50, b=50}
-            pico.output.draw.text("GAME OVER", @{ '%', x=0.5, y=0.32, '!', h=26 })
+            pico.output.draw.text("GAME OVER", @{ '%', x=0.5, y=0.325, h=0.065 })
 
             pico.zet.color.draw :white
-            pico.output.draw.text(("Time:   " ++ fmt_time(elapsed)), @{ '%', x=0.5, y=0.47, '!', h=14 })
-            pico.output.draw.text(("Score:  " ++ score),             @{ '%', x=0.5, y=0.53, '!', h=14 })
-            pico.output.draw.text(("Killed: " ++ droids_killed),     @{ '%', x=0.5, y=0.59, '!', h=14 })
-            pico.output.draw.text("Press Space to Restart",          @{ '%', x=0.5, y=0.67, '!', h=13 })
+            pico.output.draw.text(("Time:   " ++ fmt_time(elapsed)), @{ '%', x=0.5, y=0.475, h=0.035 })
+            pico.output.draw.text(("Score:  " ++ score),             @{ '%', x=0.5, y=0.53,  h=0.035 })
+            pico.output.draw.text(("Killed: " ++ droids_killed),     @{ '%', x=0.5, y=0.585, h=0.035 })
+            pico.output.draw.text("Press Space to Restart",          @{ '%', x=0.5, y=0.675, h=0.0325 })
         }
     }
 }

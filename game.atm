@@ -109,23 +109,23 @@ func GameSession () {
     }
 
     func draw_hud (elapsed) {
-		pico.zet.color.draw :white
-		pico.output.draw.text(("LIVES: "  ++ lives),         @{ '!', x=10,  y=10,  h=12, anchor='NW' })
-		pico.output.draw.text(("SCORE: "  ++ score),         @{ '!', x=160, y=10,  h=12, anchor='NW' })
-		pico.output.draw.text(("KILLED: " ++ droids_killed), @{ '!', x=10,  y=25,  h=10, anchor='NW' })
-		pico.output.draw.text(fmt_time(elapsed),              @{ '!', x=150, y=385, h=12 })
+        pico.zet.color.draw :white
+        pico.output.draw.text(("LIVES: "  ++ lives),         @{ '%', x=0.033, y=0.025,  h=0.03,  anchor='NW' })
+        pico.output.draw.text(("SCORE: "  ++ score),         @{ '%', x=0.533, y=0.025,  h=0.03,  anchor='NW' })
+        pico.output.draw.text(("KILLED: " ++ droids_killed), @{ '%', x=0.033, y=0.0625, h=0.025, anchor='NW' })
+        pico.output.draw.text(fmt_time(elapsed),              @{ '%', x=0.5,   y=0.9625, h=0.03             })
 
-		pico.zet.color.draw(DOT_COLORS.top)
-		pico.output.draw.text("W", @{ '!', x=5,  y=375, h=10, anchor='NW' })
-		pico.zet.color.draw(DOT_COLORS.bottom)
-		pico.output.draw.text("S", @{ '!', x=18, y=375, h=10, anchor='NW' })
-		pico.zet.color.draw(DOT_COLORS.left)
-		pico.output.draw.text("A", @{ '!', x=31, y=375, h=10, anchor='NW' })
-		pico.zet.color.draw(DOT_COLORS.right)
-		pico.output.draw.text("D", @{ '!', x=44, y=375, h=10, anchor='NW' })
-		pico.zet.color.draw :white
-		pico.output.draw.text("← → move   SPACE=clear row", @{ '!', x=150, y=375, h=9 })
-	}
+        pico.zet.color.draw(DOT_COLORS.top)
+        pico.output.draw.text("W", @{ '%', x=0.017, y=0.9375, h=0.025, anchor='NW' })
+        pico.zet.color.draw(DOT_COLORS.bottom)
+        pico.output.draw.text("S", @{ '%', x=0.06,  y=0.9375, h=0.025, anchor='NW' })
+        pico.zet.color.draw(DOT_COLORS.left)
+        pico.output.draw.text("A", @{ '%', x=0.103, y=0.9375, h=0.025, anchor='NW' })
+        pico.zet.color.draw(DOT_COLORS.right)
+        pico.output.draw.text("D", @{ '%', x=0.147, y=0.9375, h=0.025, anchor='NW' })
+        pico.zet.color.draw :white
+        pico.output.draw.text("← → move   SPACE=clear row", @{ '%', x=0.5, y=0.9375, h=0.0225 })
+    }
 
     func Shake () {
         set pub = @{ x=0.0, y=0.0 }
