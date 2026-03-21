@@ -1,10 +1,11 @@
 set env  = require "atmos.env.pico"
 set pico = require "pico"
+
+set G = require "state"
+
 val Wait  = require "wait"
 val Game  = require "game"
 val Death = require "death"
-
-require "state"
 
 pico.zet.window @{ title="Droidland Mage" }
 pico.zet.dim @{'!', w=300, h=400 }              ;; same w/h, no grid

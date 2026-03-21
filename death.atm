@@ -15,7 +15,7 @@ func DeathScreen (elapsed) {
             ;; meaninful %s
 
             pico.zet.color.draw :white
-            pico.output.draw.text(("Time:   " ++ fmt_time(elapsed)),
+            pico.output.draw.text(("Time:   " ++ G.fmt_time(elapsed)),
                 @{ '%', x=0.5, y=0.50, h=0.035 })
             pico.output.draw.text(("Score:  " ++ score),
                 @{ '%', x=0.5, y=0.55, h=0.035 })
